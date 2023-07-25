@@ -24,7 +24,7 @@ export function LocalizationProvider({ children }: { children: React.ReactElemen
   }, [lang]);
 
   return (
-    <LocalizationContext.Provider value={{ lang, toggleLang }}>
+    <LocalizationContext.Provider value={{ lang, toggleLang } as LocalizationContextType}>
       {children}
     </LocalizationContext.Provider>
   );

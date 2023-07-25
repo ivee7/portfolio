@@ -26,7 +26,7 @@ export function ThemeProvider({ children }: { children: React.ReactElement }) {
   }, [theme]);
 
   return (
-    <ThemeContext.Provider value={{ theme, toggleTheme }}>
+    <ThemeContext.Provider value={{ theme, toggleTheme } as ThemeContextType}>
       {children}
     </ThemeContext.Provider>
   );

@@ -9,7 +9,7 @@ import quiz from 'images/quiz.png';
 import cleaning from 'images/cleaning.png';
 import market from 'images/market.png';
 import teamly from 'images/teamly.jpeg';
-import { localize } from 'lang/Translation'
+import { localize, MatrixCodes } from 'lang/Translation'
 import './Projects.scss'
 
 export const Projects = () => {
@@ -100,7 +100,7 @@ export const Projects = () => {
                             className='text-medium'
                             onClick={() => setSort(type)}
                         >
-                            {localize(lang, textCode)}
+                            {localize(lang, textCode as MatrixCodes)}
                         </Button>
                     </li>
                 ))}

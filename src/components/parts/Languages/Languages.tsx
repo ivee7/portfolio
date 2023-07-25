@@ -27,7 +27,7 @@ export const Languages: FC<LanguagesProps> = ({className, ...props}) => {
                         active={code === lang}
                         theme='simple'
                         className='languages__lang'
-                        onClick={() => toggleTab(code)}
+                        onClick={() => toggleTab(code as LangugeCodes)}
                     >
                         {text}
                     </Button>

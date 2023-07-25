@@ -6,7 +6,7 @@ import './Project.scss'
 
 interface ProjectProps {
     description?: string
-    image: File
+    image: string
     stack: string[]
     repoLink?: string
     siteLink?: string

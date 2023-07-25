@@ -2,7 +2,7 @@ import English from './Eng';
 import Russian from './Ru';
 
 export type LangugeCodes = 'ru' | 'eng';
-type MatrixCodes = keyof typeof English;
+export type MatrixCodes = keyof typeof English;
 
 export const langCodes = [
     {
@@ -18,6 +18,7 @@ export const langCodes = [
 export const getTranslations = (langCode: LangugeCodes) => {
   if (langCode === 'eng') return English;
   if (langCode === 'ru') return Russian;
+  else return Russian;
 };
 
 export const localize = (langCode: LangugeCodes, phraseKey: MatrixCodes): string => {
