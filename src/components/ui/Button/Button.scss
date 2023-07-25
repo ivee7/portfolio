@@ -1,0 +1,16 @@
+@import 'src/assets/styles/variables';
+
+.button {
+    &--simple {
+        font-weight: $font-weight-medium;
+        color: inherit;
+
+        &:hover {
+            color: var(--text-color-highlight);
+        }
+    }
+
+    &--simple.button--active {
+        color: var(--color-active);
+    }
+}

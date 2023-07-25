@@ -1,0 +1,122 @@
+@import 'src/assets/styles/variables';
+
+.section {
+    position: relative;
+
+    &--padded &__layout {
+        padding-top: 50px;
+        padding-bottom: $column-padding-declined;
+    }
+
+    &--header {
+        z-index: 1000;
+
+        .section__masked {
+            overflow: visible;
+        }
+    }
+
+    &--light &__background {
+        background-color: var(--bg-color-primary);
+    }
+
+    &--dark &__background {
+        background-color: #0a2540;
+    }
+
+    &--angleTop {
+        margin-top: calc($column-padding-declined * -1);
+    }
+
+    &--angleTop &__layout {
+        padding: $column-padding-declined 0 $column-padding-declined;
+    }
+
+    &--angleBottom &__layout {
+        padding: $column-padding-declined 0 $column-padding-declined;
+    }
+
+    &--angleTop &__background-mask {
+        overflow: hidden;
+    }
+
+    &--angleTop &__background {
+        transform-origin: 100% 0;
+        transform: skewY(-6deg);
+    }
+
+    &--angleBottom &__background {
+        transform-origin: 0 0;
+        transform: skewY(-6deg);
+    }
+
+    &--borderBottomSolid.section--light &__background {
+        border-bottom: 1px solid var(--guide-solid-color);
+    }
+
+    &--borderBottomSolid.section--dark &__background {
+        border-bottom: 1px solid #F6F9FC;
+    }
+
+    &--borderBottomDashed.section--light &__background {
+        border-bottom: 1px dashed var(--guide-dashed-color);
+    }
+
+    &--borderBottomDashed.section--dark &__background {
+        border-bottom: 1px dashed #F6F9FC;
+    }
+
+    &--borderTopSolid.section--light &__background {
+        border-top: 1px solid var(--guide-solid-color);
+    }
+
+    &--borderTopSolid.section--dark &__background {
+        border-top: 1px solid #F6F9FC;
+    }
+
+    &--borderTopDashed.section--light &__background {
+        border-top: 1px dashed var(--guide-dashed-color);
+    }
+
+    &--borderTopDashed.section--dark &__background {
+        border-top: 1px dashed #F6F9FC;
+    }
+
+    &__masked {
+        overflow: hidden;
+    }
+
+    &__background-mask {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        overflow: visible;
+    }
+
+    &__background {
+        position: relative;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    &__container {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        justify-content: center;
+    }
+
+    &__layout-container {
+        width: 100%;
+        padding: 0 16px;
+    }
+
+    &__layout {
+        max-width: 1080px;
+        margin: 0 auto;
+        padding: 16px;
+    }
+}

@@ -1,0 +1,48 @@
+@import 'src/assets/styles/variables';
+
+.about {
+    color: var(--text-color-default);
+
+    &__title {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    &__layout {
+        display: grid;
+        grid-template-columns: 1fr;
+
+        @media (min-width: $media-mobile) {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+
+    &__description {
+        margin: 20px 0;
+        text-align: justify;
+        text-indent: 10%;
+    }
+
+    &__stack {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+
+        margin: -5px;
+    }
+
+    &__stack-item {
+        padding: 10px;
+    }
+
+    &__image {
+        max-width: 80%;
+        object-fit: contain;
+    }
+
+    &__block {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}

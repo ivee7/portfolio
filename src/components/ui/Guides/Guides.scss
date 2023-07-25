@@ -1,0 +1,66 @@
+@import 'src/assets/styles/variables';
+
+.guides {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+
+    padding: 0 $column-padding-normal;
+
+    &--light &__guide {
+        background: linear-gradient(180deg, var(--guide-dashed-color), var(--guide-dashed-color) 50%, transparent 0, transparent);
+        background-size: 1px 8px;
+
+        &:first-of-type, &:last-of-type {
+            background: var(--guide-solid-color);
+        }
+    }
+
+    &--dark &__guide {
+        background: linear-gradient(180deg, rgba(249, 245, 255, .2), rgba(249, 245, 255, .2) 50%, transparent 0, transparent);
+        background-size: 1px 8px;
+
+        &:first-of-type, &:last-of-type {
+            background: rgba(249, 245, 255, .2);
+        }
+    }
+
+    &__container {
+        position: relative;
+        display: grid;
+        grid: 1fr/repeat($guide-column-max, 1fr);
+        height: 100%;
+        max-width: $layout-width;
+        margin: 0 auto;
+
+        @media (max-width: $media-laptop) {
+            grid: 1fr/repeat($guide-column-max-laptop, 1fr);
+        }
+    }
+
+    &__guide {
+        width: 1px;
+        height: 100%;
+
+        &:last-of-type {
+            position: absolute;
+            top: 0;
+            right: 0;
+            height: 100%;
+        }
+
+        &:nth-of-type(2n) {
+            @media (max-width: $media-laptop) {
+                display: none;
+            }
+        }
+
+        &:nth-of-type(3n) {
+            @media (max-width: $media-mobile) {
+                display: none;
+            }
+        }
+    }
+}

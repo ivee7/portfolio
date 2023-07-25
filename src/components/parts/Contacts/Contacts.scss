@@ -1,0 +1,16 @@
+@import 'src/assets/styles/variables';
+
+.contacts {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 80%;
+    margin: 0 auto;
+
+    color: var(--text-color-default);
+
+    @media (min-width: $media-mobile) {
+        width: 50%;
+    }
+}

@@ -1,0 +1,11 @@
+@import 'src/assets/styles/mixins';
+
+.languages {
+    display: flex;
+    align-items: center;
+
+    &__lang {
+        padding: 0 5px;
+        font-size: inherit;
+    }
+}

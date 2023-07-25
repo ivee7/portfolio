@@ -1,0 +1,29 @@
+@import 'src/assets/styles/variables';
+
+.href {
+    &--oval {
+        display: inline-block;
+        border-radius: $border-radius-standard;
+        padding: 8px 15px;
+        background: var(--bg-color-btn-primary);
+        color: var(--text-color-secondary);
+        font-weight: $font-weight-regular;
+
+        &:hover {
+            background: var(--bg-color-btn-primary-hover);
+        }
+
+        @media (min-width: 1024px) {
+            padding: 10px 20px;
+        }
+    }
+
+    &--simple {
+        font-weight: $font-weight-medium;
+        color: inherit;
+
+        &:hover {
+            color: var(--text-color-highlight);
+        }
+    }
+}

@@ -1,0 +1,38 @@
+@import 'src/assets/styles/variables';
+@import 'src/assets/styles/mixins';
+
+.intro {
+    display: grid;
+    grid-template-columns: 1fr;
+
+    @media (min-width: $media-mobile) {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    &__block {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: left;
+    }
+
+    &__item {
+        color: var(--text-color-primary);
+        margin-top: 14px;
+
+        @media (min-width: $media-laptop) {
+            margin-top: 20px;
+        }
+
+        @include zero-vertical-offset-of-first;
+    }
+
+    &__image {
+        max-width: 80%;
+        object-fit: contain;
+
+        filter: drop-shadow(0 2mm 4mm #B4CEFF);
+    }
+
+}

@@ -1,0 +1,92 @@
+.project {
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+
+    &__layout {
+        padding-top: 100%;
+        position: relative;
+        height: 0;
+    }
+
+    &__wrapper {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+
+        border-radius: 20px;
+
+        overflow: hidden;
+
+        &:hover .project__hovered {
+            visibility: visible;
+        }
+    }
+
+    &__image {
+        width: 100%;
+        height: 100%;
+
+        object-fit: cover;
+    }
+
+    &__content {
+        padding: 6px;
+    }
+
+    &__description {
+        padding-bottom: 10px;
+        text-align: justify;
+    }
+
+    &__stack {
+        display: flex;
+        flex-wrap: wrap;
+        margin: -3px;
+    }
+
+    &__tech {
+        margin: 3px;
+        padding: 5px 10px;
+        border: 1px solid var(--bg-color-btn-secondary);
+        border-radius: 5px;
+    }
+
+    &__hovered {
+        visibility: hidden;
+
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+
+        background-color: rgba(0, 0, 0, .3);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__site {
+        background-color: white;
+        border: 1px solid black;
+
+        color: black;
+        padding: 4px 6px;
+        border-radius: 5px;
+    }
+
+    &__github {
+        margin-top: 10px;
+
+        border:  1px solid white;
+        color: white;
+        padding: 4px 6px;
+        border-radius: 5px;
+    }
+}
+
+

@@ -1,0 +1,92 @@
+// Themes
+
+html[data-theme='light'] {
+    --text-color-primary: #000427;
+    --text-color-secondary: rgba(249, 245, 255, .7);
+    --text-color-default: #FAFBFF;
+    --text-color-highlight: #5A85DB;
+
+    --bg-color-primary: #F8F8F8;
+    --bg-color-secondary: #1C1C65;
+    --bg-color-btn-primary: linear-gradient(0deg, rgba(60,29,255,1) 0%, rgba(21,185,185,1) 100%);
+    --bg-color-btn-primary-hover: linear-gradient(0deg, rgba(60,29,255,1) 0%, rgba(21,185,185,1) 60%);
+    --bg-color-btn-secondary: #000427;
+    --bg-color-btn-secondary-hover: #F9F5FF;
+
+    --guide-solid-color: rgba(0, 4, 39, .2);
+    --guide-dashed-color: rgba(0, 4, 39, .2);
+    --guide-column-max: 4;
+
+    --color-active: #F18BFF;
+
+    @media (max-width: 899px) {
+        --guide-column-max: 2;
+    }
+}
+
+html[data-theme='dark'] {
+    --text-color-primary: #FAFBFF;
+    --text-color-secondary: rgba(249, 245, 255, .7);
+    --text-color-default: #FAFBFF;
+    --text-color-highlight: #3347FF;
+
+    --bg-color-primary: #000427;
+    --bg-color-secondary: #1C1C65;
+    --bg-color-btn-primary: linear-gradient(0deg, rgba(60,29,255,1) 0%, rgba(21,185,185,1) 100%);
+    --bg-color-btn-primary-hover: linear-gradient(0deg, rgba(60,29,255,1) 0%, rgba(21,185,185,1) 60%);
+    --bg-color-btn-secondary: #F9F5FF;
+    --bg-color-btn-secondary-hover: #000427;
+
+    --guide-solid-color: rgba(221, 213, 246, 0.4);
+    --guide-dashed-color: rgba(221, 213, 246, 0.4);
+    --guide-column-max: 4;
+
+    --color-active: #F18BFF;
+
+    @media (max-width: 899px) {
+        --guide-column-max: 2;
+    }
+}
+
+$font-path: 'src/assets/fonts';
+$font-family-default: 'Helvetica', sans-serif;
+$font-family-custom: 'Montserrat';
+$font-family: $font-family-custom, $font-family-default;
+
+$font-size-basic: 10px;
+
+$font-weight-extra-light: 200;
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-semi-bold: 600;
+$font-weight-bold: 700;
+
+// Borders
+$border-radius-standard: 30px;
+
+
+// Sizes
+
+$layout-width: 1080px;
+$decline-angle: 6deg;
+$tangent-of-angle: tan(6deg);
+
+// Paddings
+
+$column-padding-normal: 16px;
+$column-padding-declined: calc(100vw * $tangent-of-angle);
+
+// Media breakpoints
+
+$media-mobile: 768px;
+$media-laptop: 1024px;
+$media-desktop: 1180px;
+
+$guide-column-max: 4;
+$guide-column-max-laptop: 2;
+
+// Animation
+
+$transition-duration-standard: 2s;
+$transition-function-standard: ease-in-out;

@@ -1,0 +1,27 @@
+@import 'src/assets/styles/variables';
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+
+    &__lower {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 10px;
+    }
+
+    &__item {
+        color: var(--text-color-secondary);
+        font-weight: $font-weight-medium;
+        text-align: end;
+
+        font-size: 1.2rem;
+
+        @media (min-width: $media-laptop) {
+            font-size: 1.4rem;
+        }
+    }
+}

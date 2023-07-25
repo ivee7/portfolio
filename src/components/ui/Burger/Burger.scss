@@ -1,0 +1,39 @@
+@import 'src/assets/styles/variables';
+
+.burger {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 20px;
+  width: 50px;
+
+  &__crossbar {
+    width: 50px;
+    height: 1px;
+
+    background-color: var(--bg-color-btn-secondary);
+
+    transition-property: width, transform, background-color;
+    transition-duration: .3s;
+    transition-timing-function: ease-in-out;
+
+    &:not(:first-child) {
+      margin-top: 8px;
+    }
+  }
+
+  &[data-active="true"] & {
+    &__crossbar {
+      width: 28px;
+    }
+
+    &__crossbar:first-child {
+      transform: translateY(5px) rotate(45deg);
+    }
+
+    &__crossbar:last-child {
+      transform: translateY(-5px) rotate(-45deg);
+    }
+  }
+}

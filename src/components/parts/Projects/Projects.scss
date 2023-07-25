@@ -1,0 +1,36 @@
+@import 'src/assets/styles/variables';
+
+.projects {
+    color: var(--text-color-primary);
+
+    &__title {
+        text-align: center;
+    }
+
+    &__sorts {
+        margin: 30px auto;
+
+        width: 80%;
+        display: flex;
+        justify-content: space-between;
+
+        @media (min-width: $media-mobile) {
+            width: 30%;
+        }
+    }
+
+    &__sort {
+        padding: 0 10px;
+    }
+
+    &__grid {
+        display: grid;
+        grid-template-columns: 1fr;
+
+        margin: -8px;
+
+        @media (min-width: $media-mobile) {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+    }
+}
