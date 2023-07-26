@@ -48,7 +48,7 @@ html[data-theme='dark'] {
     }
 }
 
-$font-path: 'src/assets/fonts';
+$font-path: '../fonts';
 $font-family-default: 'Helvetica', sans-serif;
 $font-family-custom: 'Montserrat';
 $font-family: $font-family-custom, $font-family-default;
