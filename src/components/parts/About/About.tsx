@@ -62,7 +62,8 @@ export const About = () => {
                 <div>
                     <p className='about__description text-medium'>
                         {localize(lang, 'aboutText1')}
-                        <Href target='_blank' theme='simple' href='https://teamly.ru/'>«Teamly»</Href>
+                        <Href target='_blank' theme='simple' href='https://teamly.ru/'>«Teamly»</Href>&nbsp;by&nbsp;
+                        <Href target='_blank' theme='simple' href='https://qsoft.ru/'>QSOFT</Href>
                         {localize(lang, 'aboutText2')}
                         <Href target='_blank' theme='simple' href='https://www.atlassian.com/software/confluence'>Conflunece</Href>
                         {localize(lang, 'aboutText3')}
