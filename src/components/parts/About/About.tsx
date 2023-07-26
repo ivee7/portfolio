@@ -24,6 +24,7 @@ import software from 'images/software.png'
 import { localize } from 'lang/Translation'
 import { useContext } from 'react'
 import { LocalizationContext } from 'hooks/useLocalization'
+import CertificateYP from 'docs/Sergeev_certificate_yp.pdf'
 
 export const About = () => {
     const { lang } = useContext(LocalizationContext);
@@ -67,7 +68,7 @@ export const About = () => {
                         {localize(lang, 'aboutText3')}
                         <Href target='_blank' theme='simple' href='https://www.notion.so/'>Notion</Href>
                         {localize(lang, 'aboutText4')}
-                        <Href target='_blank' theme='simple' href='' download='CertificateYP'>{localize(lang, 'aboutText5')}</Href>
+                        <Href target='_blank' theme='simple' href={CertificateYP} download>{localize(lang, 'aboutText5')}</Href>
                         {localize(lang, 'aboutText6')}
                     </p>
                     <div className='about__stack'>

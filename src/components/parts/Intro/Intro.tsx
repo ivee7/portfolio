@@ -6,6 +6,10 @@ import { useContext } from 'react'
 import { LocalizationContext } from 'hooks/useLocalization'
 import { ThemeContext } from 'hooks/useTheme'
 import { Tooltip } from 'components/ui/Tooltip'
+import ResumeEngLight from 'docs/Sergeev_eng_light_resume.pdf'
+import ResumeEngDark from 'docs/Sergeev_eng_dark_resume.pdf'
+import ResumeRuLight from 'docs/Sergeev_ru_light_resume.pdf'
+import ResumeRuDark from 'docs/Sergeev_ru_dark_resume.pdf'
 
 export const Intro = () => {
     const {lang} = useContext(LocalizationContext);
@@ -13,6 +17,13 @@ export const Intro = () => {
 
     const textResume = lang === 'eng' ? 'АНГЛИЙСКОМ' : 'РУССКОМ';
     const themeResume = theme === 'light' ? 'СВЕТЛОМ' : 'ТЕМНОМ';
+
+    const doc = () => {
+        if (lang === 'eng' && theme === 'light') return ResumeEngLight;
+        if (lang === 'eng' && theme === 'dark') return ResumeEngDark;
+        if (lang === 'ru' && theme === 'light') return ResumeRuLight;
+        if (lang === 'ru' && theme === 'dark') return ResumeRuDark;
+    }
 
     return (
         <div className='intro'>
@@ -27,8 +38,8 @@ export const Intro = () => {
                         <Href
                             className='intro__item text-large'
                             theme='oval'
-                            href=''
-                            download='SERGEEV_RESUME'
+                            href={doc()}
+                            download
                         >
                             {localize(lang, 'downloadCV')}
                         </Href>

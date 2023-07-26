@@ -14,3 +14,7 @@ declare module '*.svg' {
     const value: string;
     export = value;
 }
+declare module '*.pdf' {
+    const value: string;
+    export = value;
+}

@@ -31,7 +31,8 @@
       "lang/*": ["lang/*"],
       "layouts/*": ["layouts/*"],
       "icons/*": ["assets/icons/*"],
-      "images/*": ["assets/images/*"]
+      "images/*": ["assets/images/*"],
+      "docs/*": ["assets/docs/*"]
     }
   },
   "include": ["src"],
