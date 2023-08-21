@@ -4,7 +4,7 @@ export default {
     contacts: 'Contacts',
     initials: 'IVAN SERGEEV',
     profession: 'FRONTEND DEVELOPER',
-    greeting: 'The ability to write clean code is hard work. It is not limited to the knowledge of patterns and principles. You need to sweat over the code. It is necessary to try and fail',
+    greeting: '«The ability to write clean code is hard work. It is not limited to the knowledge of patterns and principles. You need to sweat over the code. It is necessary to try and fail» - american engineer and author Robert Martin',
     downloadCV: 'Download CV',
     aboutTitle: 'Get To Know Me',
     aboutText1: 'I have a year of experience in commercial interface development. Worked on projects: ',

@@ -36,7 +36,7 @@ export const Intro = () => {
                     </p>
                     <Tooltip text={`Вы скачиваете резюме на ${textResume} языке в ${themeResume} оформлении`}>
                         <Href
-                            className='intro__item text-large'
+                            className='intro__item intro__item--lt text-large'
                             theme='oval'
                             href={doc()}
                             download

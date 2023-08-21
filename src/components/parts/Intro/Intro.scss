@@ -26,6 +26,10 @@
         }
 
         @include zero-vertical-offset-of-first;
+
+        &--lt {
+            color: var(--text-color-default)
+        }
     }
 
     &__image {
